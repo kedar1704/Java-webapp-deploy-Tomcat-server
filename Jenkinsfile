@@ -24,8 +24,7 @@ pipeline
         
          stage('Push artifact to tomcat server'){
             steps {
-                deploy adapters: [tomcat9(credentialsId: 'tomcat_cred', path: '', url: 'http://54.188.141.133:8080/')], contextPath: null, onFailure: false, war: '**/*.war'            }
-        }
+                deploy adapters: [tomcat7(credentialsId: 'final', path: '', url: 'http://52.33.39.138:8080/')], contextPath: null, war: '**/*.war'        }
         
        
     }
